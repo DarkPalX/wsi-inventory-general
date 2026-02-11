@@ -31,6 +31,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="{{ asset('theme/css/colors.php?color=4a4a4a') }}">
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	
 	<!-- DataTable CSS -->
     <link rel="stylesheet" href="{{ asset('theme/include/DataTables/datatables.css') }}">
 

@@ -71,21 +71,17 @@
 						<img class="logo-dark p-2" srcset="{{ asset('images/company-logo-white.png') }}" src="{{ asset('images/company-logo-white.png') }}" alt="Logo" style="height: 55px;">
 					</a>
 				</div> --}}
-				<div id="logo">
-					<a href="{{ route('home') }}" class="d-flex align-items-center text-decoration-none">
-						<img class="logo-default p-2"
-							src="{{ asset('images/company-logo-white.png') }}"
-							alt="Logo"
-							style="height:65px;">
+				<div id="logo" class="d-flex justify-content-center">
+					<a href="{{ route('home') }}" class="d-flex align-items-center justify-content-center text-decoration-none">
+
+						<img class="logo-default p-2" src="{{ asset('images/company-logo-white.png') }}" alt="Logo" style="height:70px;">
 
 						<span class="d-none d-lg-block ms-2">
-							<strong class="text-uppercase"
-									style="font-size:14px; color:#ffffff;">
-								General Inventory System
-							</strong>
+							<strong class="text-uppercase" style="font-size:17px; color:#ffffff; font-family:Poppins, sans-serif; line-height: 4;">General Inventory System</strong>
 						</span>
 					</a>
 				</div>
+
 
 				<!-- #logo end -->
 
