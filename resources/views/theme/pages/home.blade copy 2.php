@@ -375,31 +375,6 @@
                     </div>
                 </div>
 
-                {{-- GRAPHS --}}
-                <hr>
-
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <div class="border rounded-5 shadow p-3 h-100 d-flex flex-column">
-                            <h6 class="mb-3">Issuance Overview</h6>
-                            <div class="flex-grow-1">
-                                <canvas id="issuanceChart"></canvas>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 mb-4">
-                        <div class="border rounded-5 shadow p-3 h-100 d-flex flex-column">
-                            <h6 class="mb-3">Request Status</h6>
-                            <div class="flex-grow-1">
-                                <canvas id="requestChart"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
                 <div class="row">
                     <div class="col-md-4">
                         <div class="row">
@@ -605,51 +580,6 @@
                     }
                 ]
             });
-        });
-    </script>
-    
-	<script src="{{ asset('theme/js/chart-npm.js') }}"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-
-            // Issuance trend chart
-            new Chart(document.getElementById('issuanceChart'), {
-                type: 'line',
-                data: {
-                    labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-                    datasets: [{
-                        label: 'Issuance',
-                        data: [12, 19, 8, 15, 22, 18],
-                        borderWidth: 2,
-                        tension: 0.3
-                    }]
-                },
-                options: {
-                    plugins: { legend: { display: false } },
-                    responsive: true
-                }
-            });
-
-            // Request status chart
-            new Chart(document.getElementById('requestChart'), {
-                type: 'pie',
-                data: {
-                    labels: ['Pending','Unfulfilled','Completed'],
-                    datasets: [{
-                        data: [
-                            {{ $total_pending_issuance }},
-                            {{ $total_unfulfilled_requests }},
-                            {{ $total_issuance - $total_pending_issuance - $total_unfulfilled_requests }}
-                        ]
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false
-
-                }
-            });
-
         });
     </script>
 @endsection
